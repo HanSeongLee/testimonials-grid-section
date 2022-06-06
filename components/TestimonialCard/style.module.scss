@@ -1,0 +1,55 @@
+
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  color: #48556A;
+  background: #FFFFFF;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+  border-radius: 8px;
+  padding: 26px 32px 32px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    grid-gap: 17px;
+    margin-bottom: 18px;
+
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+
+      &.avatarHighlight {
+        width: 30px;
+        height: 30px;
+        border: 2px solid #A775F1;
+      }
+    }
+
+    .username {
+      font-size: 13px;
+      line-height: 13px;
+      margin-bottom: 4px;
+    }
+
+    .verifiedGraduate {
+      font-size: 11px;
+      line-height: 11px;
+      color: rgba(72, 85, 106);
+      opacity: 0.5;
+    }
+  }
+
+  .highlight {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 18px;
+    opacity: 0.7;
+  }
+}
