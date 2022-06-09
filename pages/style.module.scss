@@ -1,0 +1,65 @@
+@import "styles/utils";
+
+.main {
+  padding: 71px 0;
+
+  .testimonialContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+
+    @mixin colored($background) {
+      background: $background;
+
+      * {
+        color: #FFFFFF;
+      }
+    }
+
+    li {
+      &:first-child {
+        & > div {
+          @include colored(#733FC8);
+          position: relative;
+
+          &::before {
+            position: absolute;
+            top: 0;
+            right: 24px;
+            width: 104px;
+            height: 102px;
+            background: url("/img/bg-pattern-quotation.svg") no-repeat;
+            content: "";
+          }
+
+          * {
+            position: relative;
+          }
+
+          strong {
+            margin-bottom: 40px;
+
+            @include media(">desktop") {
+              margin-bottom: 16px;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        & > div {
+          @include colored(#48556A);
+        }
+      }
+
+      &:nth-child(3) {
+        height: 100%;
+        display: flex;
+      }
+
+      &:nth-child(4) > div {
+        @include colored(#19202D);
+      }
+    }
+  }
+}
